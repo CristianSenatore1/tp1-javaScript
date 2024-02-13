@@ -1,0 +1,156 @@
+//let ingreso = prompt("Selecciona una bebida \n 1-cafe \n 2-Te \n 3-Agua Caliente");
+
+/* if (ingreso == "1"){
+    alert("Seleccionaste Cafe");
+} else if (ingreso == "2"){
+    alert("Seleccionaste Te");
+} else if (ingreso == "3"){
+    alert("Seleccionaste Agua Caliente");
+} else {
+    alert("No seleccionaste ninguna bebida");
+} */
+
+//     SWITCH
+/* switch(ingreso){
+    case "1": alert("Seleccionaste Cafe");
+    break;
+    case "2": alert("Seleccionaste Te");
+    break;
+    case "3": alert("Seleccionaste Agua Caliente");
+    break;
+    default:
+        alert("No seleccionaste ninguna bebida");
+        break;
+}*/
+
+function saludar() {
+  console.log("Hola Tarola");
+}
+//llamar a la function
+
+/*for (let i=0; i<3; i++){
+    saludar()
+}*/
+
+//function saludarConParametros(parametro){
+//    console.log("Hola " + parametro);
+//}
+//let nombre = "Pedro"
+//saludarConParametros(nombre)
+
+//saludarConParametros("Dani")
+//saludarConParametros("Ignacio")
+//saludarConParametros("Maria")
+
+/* function saludarConNombreYMomento(nombre, momento){
+    console.log("Hola " + nombre + ", buenos/as " + momento);
+}
+
+saludarConNombreYMomento("Dani","dias");
+saludarConNombreYMomento("Pablo","tardes");
+saludarConNombreYMomento("Noches","Claudia");
+ */
+
+function sumar(num1, num2) {
+  //console.log(num1 + num2);
+  return num1 + num2;
+}
+/* console.log( sumar(5,7));
+let resultadoSuma= sumar(-89,45)
+console.log("el resultado guardado en resultado suma es: " + resultadoSuma); */
+function division(num1, num2) {
+  return num1 / num2;
+}
+
+let resultadoDivision = division(4, 2);
+//console.log(resultadoDivision);
+
+// los parametros pueden xer los resultados de otras funciones
+//console.log(sumar(4,resultadoDivision));
+
+function calculadora(num1, num2, op) {
+  switch (op) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    case "/":
+      return num1 / num2;
+    default:
+      return "Opcion no valida";
+  }
+}
+
+/* console.log(calculadora(3,6,"+"));
+console.log(calculadora(3,6,"-"));
+console.log(calculadora(3,6,"*"));
+console.log(calculadora(3,6,"/"));
+
+ */
+//     SCOPE 
+
+//let resultado = 0; // global
+
+function resta(n1,n2){
+    let resultado = n1 - n2; //local
+    //console.log("soy la variable resultado dentro de la funcion " + resultado);
+    //return resultado;
+}
+/* 
+console.log("soy la variable resultado fuera de la funcion " + resultado);
+resta (40,10)
+//console.log(resultado);
+
+if(resultado < 10){
+    let resultado = 10;
+    console.log(resultado);
+    console.log("Es menor a 10");
+} else {
+    console.log("NO es menor a 10");
+}
+ */
+
+// Funcion Anonima
+
+const saludo= function(nombre){
+    return " Hola Tarola "+  nombre
+}
+
+
+console.log(saludo("DANI"));
+
+const saludo2 = () =>{
+    return "Buenos dias a todos"
+}
+
+console.log(saludo2());
+
+
+
+
+
+/* tp 1
+let nombre = prompt("Ingrese su nombre: ")
+let edad= prompt("Ingrese su edad: ")
+let mail = prompt("Ingrese su mail: ")
+
+function saludar(nombre){
+    console.log("Hola " + nombre + " Bienvenido a tu consecionario Peugeot")
+}
+
+let ingreso = prompt("Selecciona un area de consulta \n 1- Ventas \n 2- Administracion \n 3- Taller");
+
+/* switch(ingreso){
+    case "1": alert("Seleccionaste Cafe");
+    break;
+    case "2": alert("Seleccionaste Te");
+    break;
+    case "3": alert("Seleccionaste Agua Caliente");
+    break;
+    default:
+        alert("No seleccionaste ninguna bebida");
+        break;
+}*/
+
