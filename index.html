@@ -6,30 +6,234 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <title>Trabajo Practico Senatore | Comisión 53920</title>
 
 </head>
 
+
+
 <body>
-  <div class="fondo-header">
-    <div class="logo">
-      <img src="img/peugeot-logo-alt.webp" alt="Logo de la empresa">
+  <header class="fondo-header">
+    <a href="index.html" class="logo">
+      <img src="img/leonTransparente.webp" alt="Logo de la empresa">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pages/nuevos.html">Nuevos</a>
+      <a href="pages/usados.html">Usados</a>
+      <a href="pages/service.html">Service</a>
+      <a href="pages/administracion.html">Administracion</a>
+      <button id="logout">Logout</button>
+    </nav>
+    <section class="textos-header">
+      <h1 class="titulo">Peugeot Concesionario Oficial</h1>
+      <p>
+        Te presentamos nuestros vehículos y servicios en conjunto. ¡Te deseamos una agradable visita!
+      </p>
+    </section>
+
+
+  </header>
+
+  <main>
+    <section class="contenedor sobre-nosotros">
+      <h2 class="titulo">Acerca de Nosotros</h2>
+      <div class="contenedor-sobre-nosotros">
+        <div>
+          <img src="img/logoHistoria.jpg" alt="logo historia" class="imagen-about-us">
+        </div>
+        <div class="contenido-textos">
+          <p>
+            Peugeot es una marca internacional, con 200 años de historia y presencia en más de 160
+            países. Actualmente se encuentra en un camino hacia la alta gama, sin dejar de ser
+            generalistas y con el objetivo de liderar cada segmento donde compiten sus automóviles.
+            La marca apunta a una mejora en gestión de calidad y de servicio de postventa. El nuevo
+            slogan, Motion & Emotion, es la prueba más significativa del constante desarrollo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="titulo">
+      Post Venta / Taller
+    </h2>
+
+    <div class="taller">
+
+
+      <div class="tarjetaServicio">
+        <img src="img/galeria0km-1.jpg" alt="Imagen Service" class="imagen1Service">
+        <div class="contenidoTarjeta">
+          <h3>Service 10.000 kms</h3>
+          <p>
+            Si estás en los 10.000 kms, te recordamos que debes realizar el primer service par el
+            cuidado y control de tu vehículo.
+            Te recordamos tambien, debes hacerlo si ya ha transcurrido 1 año de la compra.
+          </p>
+        </div>
+        <div class="botonTarjeta">
+          <button>Consultanos</button>
+        </div>
+
+      </div>
+
+      <div class="tarjetaServicio">
+        <img src="img/galeria0km-3.jpg" alt="Imagen Service" class="imagen1Service">
+        <div class="contenidoTarjeta">
+          <h3>Control de la Distribucion</h3>
+          <p>
+            Si lo que estás necesitando es el service de recambio de la distribucion, o solo
+            necesitas un control de la misma, te esperamos en nuestros talleres oficiales, para
+            pasar un buen momento
+          </p>
+        </div>
+
+        <div class="botonTarjeta">
+          <button>Consultanos</button>
+        </div>
+      </div>
+
+      <div class="tarjetaServicio">
+        <img src="img/galeria0km-2.jpg" alt="Imagen Service" class="imagen1Service">
+        <div class="contenidoTarjeta">
+          <h3>Reparacion de chapa y pintura</h3>
+          <p>Aqui encontrarás a los mayores expertos en el tratamiento de la chapa y la pintura de tuvehiculo,
+            cualquier tipo de arreglos que debas hacerlo, te garantizamos que queda igual a 0km! te
+            esperamos en nuestro taller.</p>
+        </div>
+
+        <div class="botonTarjeta">
+          <button>Consultanos</button>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="wrapper">
-    <h1><span>TP 1 </span></h1>
-    <hr />
-    <h2>primera entrega</h2>
-  </div>
+    <section id="noticias">
+      <h2 class="titulo">
+        Ultimas Noticias de la Marca
+      </h2>
+      <div class="box">
+        <div class="imagenBox">
+          <img src="../img/noticias1.jpg" alt="Imagen Noticias" class="imagenNoticias1">
+        </div>
+        <div class="detailBox">
+          <h5>
+            LOS 3 MODELOS DE PEUGEOT QUE CUESTAN LO MISMO PARA NO PAGAR «IMPUESTO AL LUJO»
+          </h5>
+          <p>
+            En Argentina sucede desde hace tiempo algo muy particular con los precios de lista sugeridos por
+            las
+            marcas
+            para los autos cero kilómetro. Desde que está vigente el mal llamado “impuesto al lujo”, un
+            arancel
+            que
+            afecta cada vez más a modelos de gama baja y media, algunas empresas “topean” los precios de sus
+            modelos
+            para que no estén afectados por la primera o la segunda escala del impuesto.
+          </p>
+          <a href="https://autotest.com.ar/noticias/3-modelos-de-peugeot-que-cuestan-lo-mismo-para-no-pagar-impuesto-al-lujo/"
+            target="_blank">
+            Leer Mas
+          </a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imagenBox">
+          <img src="img/3008E.jpg" alt="Imagen Noticias" class="imagenNoticias1">
+        </div>
+        <div class="detailBox">
+          <h5>
+            PRIMERA FOTO OFICIAL DE LA NUEVA PEUGEOT E-3008
+          </h5>
+          <p>
+            La nueva generación de la SUV para el Segmento C (compacto) será 100% eléctrica y tendrá una
+            silueta
+            tipo fastback. La nueva 3008 se presentará en septiembre próximo, pero la marca adelantó esta
+            primera imagen para poner en marcha un concurso internacional. Quienes fotografíen a las
+            unidades de
+            prensa con camuflaje y las compartan en las redes sociales de Peugeot serán invitados a
+            participar
+            del test drive para la prensa internacional, que se realizará en 2024.
+          </p>
+          <a href="https://insideevs.com.ar/news/677087/peugeot-e-3008-primera-foto/" target="_blank">
+            Leer Mas
+          </a>
+        </div>
+      </div>
 
-  <script>
-  </script>
 
+
+
+      <h2>Que auto Buscas?</h2>
+      <label for="ingreso">Buscar Vehiculo</label>
+      <input type="text" name="ingreso" id="ingreso" autofocus />
+      <button id="btnSearch" class="btn btn-search">buscar</button>
+      <div id="contenedor" class="contenedor">
+      </div>
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+  <footer class="footerSection">
+
+    <iframe class="mapaUbicacion"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8098.426572944247!2d-64.27221606920526!3d-31.414981904274438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298c95ab9728b%3A0xa946f51d4f2f3fc9!2sAvant%20Peugeot%20Concesionario%20Oficial!5e0!3m2!1ses-419!2sit!4v1699807320335!5m2!1ses-419!2sit"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="footer-contenedor">
+      <div class="footer-row">
+        <div class="footer-links">
+          <h4>Area comercial</h4>
+          <h5>Nuestros Horarios:</h5>
+          <p class="mb-0">
+            lun-vier 8:30 a 19:30 <br>
+            sab 9:00 a 18:30 <br>
+            dom y feriados cerrado
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Administracion y taller</h4>
+          <h5>Nuestros Horarios:</h5>
+          <p class="mb-0">
+            lun-vier 8:30 a 19:30 <br>
+            sab 9:00 a 13:00 <br>
+            dom y feriados cerrado</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Siguenos</h4>
+          <p>
+            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
-
 </body>
 
 </html>
