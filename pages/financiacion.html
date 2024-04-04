@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Financiación</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css/financstyle.css">
+
+</head>
+
+<body>
+    <header class="fondo-header">
+        <a href="../index.html" class="logo">
+            <img src="../img/leonTransparente.webp" alt="Logo de la empresa">
+        </a>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="nuevos.html">Nuevos</a>
+            <a href="usados.html">Usados</a>
+            <a href="service.html">Service</a>
+            <a href="financiacion.html">Financiacion</a>
+
+        </nav>
+        <section class="textos-header">
+            <h1>Peugeot Concesionario Oficial</h1>
+            <p>
+                Te presentamos nuestros vehículos y servicios en conjunto. ¡Te deseamos una agradable visita!
+            </p>
+        </section>
+
+
+    </header>
+
+    <div id="formulario">
+        <h2>Calculadora de Financiación</h2>
+
+        <label for="auto">Seleccione un auto:</label>
+        <select id="auto" name="auto">
+            <option value="">Seleccione un auto</option>
+        </select>
+
+        <label for="porcentajeEntrega">Porcentaje de entrega (%):</label>
+        <input type="number" id="porcentajeEntrega" name="porcentajeEntrega"
+            placeholder="Ingrese el porcentaje de entrega">
+
+        <label for="cuotas">Cantidad de cuotas:</label>
+        <input type="number" id="cuotas" name="cuotas" placeholder="Ingrese la cantidad de cuotas">
+
+        <label for="tasaInteres">Tasa de interés (%):</label>
+        <input type="number" id="tasaInteres" name="tasaInteres" placeholder="Ingrese la tasa de interés">
+
+        <button onclick="calcularFinanciacion()">Calcular</button>
+
+        <div id="resultado">
+            <h3>Detalles de Financiación</h3>
+            <p id="montoEntrega"></p>
+            <p id="montoPrestamo"></p>
+            <p id="montoCuota"></p>
+        </div>
+    </div>
+
+    <script>
+
+        function llenarSelectAutos() {
+            const selectAutos = document.getElementById('auto');
+            autos.forEach(auto => {
+                const option = document.createElement('option');
+                option.value = auto.id;
+                option.textContent = auto.nombre;
+                selectAutos.appendChild(option);
+            });
+        }
+
+        window.onload = llenarSelectAutos;
+
+        function calcularFinanciacion() {
+            const autoSeleccionado = document.getElementById('auto').value;
+
+            const auto = autos.find(a => a.id === parseInt(autoSeleccionado));
+
+            const valorAuto = auto ? auto.precio : 0;
+            const porcentajeEntrega = parseFloat(document.getElementById('porcentajeEntrega').value);
+            const cuotas = parseInt(document.getElementById('cuotas').value);
+            const tasaInteres = parseFloat(document.getElementById('tasaInteres').value);
+
+            const montoEntrega = (porcentajeEntrega / 100) * valorAuto;
+
+            const montoPrestamo = valorAuto - montoEntrega;
+
+            const interesPorCuota = tasaInteres / 100;
+            const montoTotalPrestamo = montoPrestamo * (1 + interesPorCuota);
+            const montoCuota = montoTotalPrestamo / cuotas;
+
+
+            Swal.fire({
+                title: 'Detalles de Financiación',
+                html: `<p>Monto de la entrega: $${montoEntrega.toFixed(2)}</p>
+                     <p>Monto del préstamo: $${montoPrestamo.toFixed(2)}</p>
+                     <p>Monto de cada cuota: $${montoCuota.toFixed(2)}</p>`,
+                icon: 'success'
+            });
+        }
+    </script>
+    <footer class="footerSection">
+
+        <iframe class="mapaUbicacion"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8098.426572944247!2d-64.27221606920526!3d-31.414981904274438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298c95ab9728b%3A0xa946f51d4f2f3fc9!2sAvant%20Peugeot%20Concesionario%20Oficial!5e0!3m2!1ses-419!2sit!4v1699807320335!5m2!1ses-419!2sit"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="footer-contenedor">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Area comercial</h4>
+                    <h5>Nuestros Horarios:</h5>
+                    <p class="mb-0">
+                        lun-vier 8:30 a 19:30 <br>
+                        sab 9:00 a 18:30 <br>
+                        dom y feriados cerrado
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Administracion y taller</h4>
+                    <h5>Nuestros Horarios:</h5>
+                    <p class="mb-0">
+                        lun-vier 8:30 a 19:30 <br>
+                        sab 9:00 a 13:00 <br>
+                        dom y feriados cerrado</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <p>
+                        <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
